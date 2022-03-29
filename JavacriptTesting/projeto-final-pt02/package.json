@@ -1,0 +1,23 @@
+{
+  "name": "projeto-final-pt01",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "npx mocha -w --parallel \"./{,!(node_modules)/**/}*.test.js\"",
+    "test:cov": "npx nyc mocha --parallel \"./{,!(node_modules)/**/}*.test.js\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "faker": "5.1.0",
+    "mocha": "^8.2.1",
+    "nyc": "^15.1.0",
+    "sinon": "^9.2.1"
+  }
+}
