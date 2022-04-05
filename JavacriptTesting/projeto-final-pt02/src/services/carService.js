@@ -5,8 +5,22 @@ class CarService {
     this.carRepository = new BaseRepository({ file: cars });
   }
 
-  test() {
-    return this.carRepository.find();
+  chooseRandomCar(carCategory) {
+    const randomCarIndex = this.getRandomPositionFromArray(carCategory.carIds);
+    const carId = carCategory.carIds[randomCarIndex];
+    return carId;
+  }
+
+  getRandomPositionFromArray(list) {
+    const listLength = list.length;
+    return Math.floor(Math.random() * listLength);
+  }
+
+  async getAvailableCar(carCategory) {
+    const carId = this.chooseRandomCar(carCategory);
+    const car = await this.carRepository.find(carId);
+
+    return car;
   }
 }
 
