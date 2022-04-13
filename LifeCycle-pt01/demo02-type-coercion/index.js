@@ -115,4 +115,5 @@ console.assert("Ae".concat(item) === 'Ae{"name":"ErickWendel","age":25}');
 console.assert(item == String(item));
 
 const item2 = { ...item, name: "Zezin", age: 20 };
-console.log("New Object", item2);
+// console.log("New Object", item2);
+console.assert(item2.name === "Zezin" && item2.age === 20);
