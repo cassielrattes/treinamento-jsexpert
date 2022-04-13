@@ -86,7 +86,6 @@ describe("CarService Suite Tests", () => {
     // 37.6 * 1.3 = 48.88 * 5 days = 244.40
 
     // nao depender de dados externos!
-
     sandbox
       .stub(carService, "taxesBasedOnAge")
       .get(() => [{ from: 40, to: 50, then: 1.3 }]);
